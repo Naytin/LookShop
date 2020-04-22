@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LookShop/products</title>
+  <!-- <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick-theme.css.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  
+</head>
+
+<body>
+  
+  <header class="header">
+    <!-- top-line -->
+    <div class="top-line">
+      <div class="container ">
+        <div class="top-line__wrapper flex-container">
+
+          <div class="contact-us">
+            <span class="contact-us__item">custom care: <a class="contact-us__link" href="#">888-23-4567</a></span>
+          </div>
+
+          <div class="wrapper flex-container">
+            <div class="change-currency__wrapper">
+              <select class="change-currency" name="change-currency">
+                <option class="change-currency__item" selected value="&#36;">&#36; US</option>
+                <option class="change-currency__item"  value="&#8372;">&#8372; UA</option>
+                <option class="change-currency__item" value="&#36;">&euro; EU</option>
+              </select>
+            </div>
+
+            <div class="header__user">
+              <i class="fas fa-user"></i>
+              <a href="#" class="header__user-link">my account</a>
+            </div>
+
+            <div class="search__icon">
+              <i class="fas fa-search"></i>
+            </div>
+
+            <div class="search-form__input-wrapper flex-container">
+              <input  name="search" type="text" placeholder="blue shirt"  class="search-form__input">
+              <button class="search-form__submit">search</button>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /container -->
+    </div><!-- /top-line -->
+    <!--/top-line -->
+
+    <div class="container">
+      
+      <div class="wrapper-top">
+       
+        <div class="wrapper-menu flex-container">
+          <div class="logo-wrapper">
+            <a href="index.html" class="logo__link">
+              <img src="img/logo.png" alt="LookShoop" class="logo">
+            </a>
+          </div>
+
+          <div class="burger-menu-wrapp">
+            <h6 class="burger-menu__title">MENU</h6>
+            <div class="burger-menu">
+              <div class="burger-btn">
+                <span class="btn__elem"></span>
+                <span class="btn__elem"></span>
+                <span class="btn__elem"></span>
+              </div>
+            </div>
+          </div>
+
+          <nav class="nav">
+
+            <ul class="nav-list">
+              <li class="nav__item dropdown"><a href="#" class="nav__link">new <i class="fas fa-sort-down"></i></a>
+                <ul class="nav-list submenu" data-submenu>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Замена стекла</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Разблокировка</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Чистка</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Замена микрофона</a></li>
+                </ul>
+              </li>
+              <li class="nav__item dropdown"><a href="#" class="nav__link">designers <i class="fas fa-sort-down"></i></a>
+                <ul class="nav-list submenu" data-submenu>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">D&G</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Calvin Clein</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Luis Vuiton</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Versace</a></li>
+                </ul></li>
+              <li class="nav__item dropdown"><a href="#" class="nav__link">women <i class="fas fa-sort-down"></i></a>
+                <ul class="nav-list submenu" data-submenu>
+                  <li class="nav__item">
+                    <a href="products.html" class="nav__link">Clothes</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Shoes</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Accessories</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Bags</a></li>
+                </ul></li>
+              <li class="nav__item dropdown"><a href="#" class="nav__link">men <i class="fas fa-sort-down"></i></a>
+                <ul class="nav-list submenu" data-submenu>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Clothes</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Shoes</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Accessories</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Bags</a></li>
+                </ul></li>
+              <li class="nav__item dropdown"><a href="#" class="nav__link">clearence <i class="fas fa-sort-down"></i></a>
+                <ul class="nav-list submenu" data-submenu>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Замена стекла</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Разблокировка</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Чистка</a></li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link">Замена микрофона</a></li>
+                </ul></li>
+            </ul>
+          </nav>
+
+
+          <div class="cart-wrapper">
+            <div class="show-cart"><span class="text">YOUR CART</span><button class="show-cart__btn"><i class="fas fa-sort-down"></i></button></div>
+            <div class="show-items flex-container">
+              <button class="cart-btn"><img class="cart-icon" src="img/icons/Vector Smart Object.svg" alt="cart"></button>
+              <div class="cart-status-wrapper flex-container">
+                <div class="cart-status"><span class="current-items">0</span> ITEMS</div>
+                <div class="total-amount-cont"><span class="total-amount"><span class="currency">&#36;</span> 0</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="underline"></div>
+    <ul class="breadcrumb">
+      <li class="breadcrumb__item"><a class="breadcrumb__link " href="index.html" name="home"><i class="fas fa-home"></i></a></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link " href="products.html">women</a></li>
+      <li class="breadcrumb__item "><a class="breadcrumb__link breadcrumb-active" href="#">clothes</a></li>
+    </ul>
+    <div class="underline"></div>
+    </div>
+    
+  </header>
+  <div class="inner">
+    <div class="container">
+      <div class="slider">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+  
+        <div class="slider__item ">
+          <div class="flex-container">
+          <div class="slider__product-img">
+            <div class="slider__img-wrapp">
+              <img class="img-responsive" src="img/products/Layer30.jpg" alt="Heart-top">
+              <img class="img-responsive" src="img/products/Layer31.jpg" alt="Heart-top">
+            </div>
+            <div class="product__info-wrapp">
+              <div class="product__info">
+                <h3 class="product__name">Open Heart Top</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">19.95</p>
+                </div>
+                <p class="product__desc">
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh 
+                  vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, 
+                  nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit 
+                  amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+                  Nam nec tellus a odio tincidunt auctor a ornare odio. 
+                </p>
+                
+                <button class="simple-btn big">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+      
+        
+
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="underline"></div>
+    </div>
+    
+  </div>
+
+  <section class="sec-products container">
+
+    <div class="flex-container">
+      <div class="products-wrapp">
+        <div class="catalog-settings">
+          <div class="catalog-settings__sorting">
+            <p class="sorting__text">
+              sort by
+            </p>
+            <select name="sort" class="sort">
+              <option value="" class="sort-by">Rank</option>
+              <option  class="sort-by">Cheap</option >
+              <option  class="sort-by">Expensive</option >
+              <option  class="sort-by">Novely</option >
+              <option  class="sort-by">Date</option >
+              <option  class="sort-by">Popularity</option >
+            </select>
+          </div>
+  
+          <div class="pagination">
+            <p class="pages-count"></p>
+            <div class="pagination__prev">&#8250;</div>
+            <div class="pagination-wrapp flex-container">
+              
+            </div>
+            <div class="pagination__next">&#8250;</div>
+          </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div class="products flex-container">
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">MIMOSA LACE DRESS</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">76.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">MIMOSA LACE DRESS</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">76.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">MIMOSA LACE DRESS</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">76.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-wrapp">
+            <div class="product__item">
+              <div class="product__img-wrapp">
+                <button class="add-to-cart"><i class="fas fa-shopping-bag"></i>SHOP IT</button>
+                <img src="img/Clip6.jpg" alt="sundress" class="product__img">
+                <a href="#" class="product__link">MORE INFO <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+                <button class="simple-btn sm">ADD TO CART <i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="catalog-settings right">
+          <div class="pagination">
+            <p class="pages-count"></p>
+            <div class="pagination__prev">&#8250;</div>
+            <div class="pagination-wrapp flex-container">
+              
+            </div>
+            <div class="pagination__next">&#8250;</div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <div class="sidebar-mobile">
+        <i class="fas fa-cog"></i>
+      </div> -->
+      <div class="sidebar">
+        
+        <div class="sidebar__wrapp">
+
+          <div class="sidebar-col">
+            <div class="sidebar__header">
+              <p class="text">CATEGORIES</p>
+            </div>
+            <div class="sidebar__body">
+
+              <div class="sidebar__item">
+                <p class="sidebar__item-text">NEW</p>
+                <div class="form-checkbox">
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-1">
+                    <label for="sidebar-ckeck-input-1" class="brand">Clothes</label>
+                  </div>
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-2">
+                    <label for="sidebar-ckeck-input-2" class="brand">Shoes</label>
+                  </div>
+                </div>
+              </div>
+              <div class="underline"></div>
+
+              <div class="sidebar__item">
+                <p class="sidebar__item-text">DESIGERS</p>
+                <div class="form-checkbox">
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-3">
+                    <label for="sidebar-ckeck-input-3" class="brand">D&G</label>
+                  </div>
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-4">
+                    <label for="sidebar-ckeck-input-4" class="brand">Calvin Clein</label>
+                  </div>
+                </div>
+              </div>
+              <div class="underline"></div>
+
+              <div class="sidebar__item">
+                <p class="sidebar__item-text">WOMEN</p>
+                <div class="form-checkbox">
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-5">
+                    <label for="sidebar-ckeck-input-5" class="brand">Clothes</label>
+                  </div>
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-6">
+                    <label for="sidebar-ckeck-input-6" class="brand">Shoes</label>
+                  </div>
+                </div>
+              </div>
+              <div class="underline"></div>
+
+              <div class="sidebar__item">
+                <p class="sidebar__item-text">MEN </p>
+                <div class="form-checkbox">
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-7">
+                    <label for="sidebar-ckeck-input-7" class="brand">Clothes</label>
+                  </div>
+                  <div class="form-checkbox__item">
+                    <input class="checkbox" type="checkbox" name="ckeck" id="sidebar-ckeck-input-8">
+                    <label for="sidebar-ckeck-input-8" class="brand">Shoes</label>
+                  </div>
+                </div>
+              </div>
+              <div class="underline"></div>
+              <div class="sidebar__item">
+                <div class="form-input__item">
+                  <label >from</label>
+                  <input class="input__item" type="text" placeholder="0">
+                  <label >to</label>
+                  <input class="input__item" type="text" placeholder="10.000">
+                  <button class="simple-btn sm">OK</button>
+                </div>
+              </div>
+
+              <div class="sidebar__item">
+                <p class="sidebar-text">SELECT YOUR SIZE</p>
+                <div class="size__wrapp">
+                  <div class="size__item">XS</div>
+                  <div class="size__item">S</div>
+                  <div class="size__item">M</div>
+                  <div class="size__item">L</div>
+                  <div class="size__item">XL</div>
+                </div>
+              </div>
+
+            </div><!--sidebar__body-->
+
+              <div class="sidebar__header">
+                <p class="text">ON SALE</p>
+              </div>
+
+              <div class="sidebar__body">
+
+                <a class="sidebar__item-link">
+                  <div class="sidebar__item flex-container">
+                    <div class="sidebar__img-wrapp">
+                      <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+                    </div>
+                    <div class="sidebar__info-wrapp">
+                      <div class="product__info">
+                        <h3 class="product__name">SOFI BLOUSE</h3>
+                        <div class="product__price flex-container">
+                          <span class="currency">&#36;</span>
+                          <p class="product__cost">79.95</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              <div class="underline"></div>
+              <a class="sidebar__item-link">
+                <div class="sidebar__item flex-container">
+                  <div class="sidebar__img-wrapp">
+                    <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+                  </div>
+                  <div class="sidebar__info-wrapp">
+                    <div class="product__info">
+                      <h3 class="product__name">SOFI BLOUSE</h3>
+                      <div class="product__price flex-container">
+                        <span class="currency">&#36;</span>
+                        <p class="product__cost">79.95</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <div class="underline"></div>
+
+            <a class="sidebar__item-link">
+              <div class="sidebar__item flex-container">
+                <div class="sidebar__img-wrapp">
+                  <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+                </div>
+                <div class="sidebar__info-wrapp">
+                  <div class="product__info">
+                    <h3 class="product__name">SOFI BLOUSE</h3>
+                    <div class="product__price flex-container">
+                      <span class="currency">&#36;</span>
+                      <p class="product__cost">79.95</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <div class="underline"></div>
+
+            
+          </div><!--sidebar__body ON SALE-->
+          <div class="sidebar__header">
+            <p class="text">FEATURED PRODUCTS</p>
+          </div>
+
+          <div class="sidebar__body">
+
+            <a class="sidebar__item-link">
+              <div class="sidebar__item flex-container">
+                <div class="sidebar__img-wrapp">
+                  <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+                </div>
+                <div class="sidebar__info-wrapp">
+                  <div class="product__info">
+                    <h3 class="product__name">SOFI BLOUSE</h3>
+                    <div class="product__price flex-container">
+                      <span class="currency">&#36;</span>
+                      <p class="product__cost">79.95</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <div class="underline"></div>
+          <a class="sidebar__item-link">
+            <div class="sidebar__item flex-container">
+              <div class="sidebar__img-wrapp">
+                <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+              </div>
+              <div class="sidebar__info-wrapp">
+                <div class="product__info">
+                  <h3 class="product__name">SOFI BLOUSE</h3>
+                  <div class="product__price flex-container">
+                    <span class="currency">&#36;</span>
+                    <p class="product__cost">79.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        <div class="underline"></div>
+
+        <a class="sidebar__item-link">
+          <div class="sidebar__item flex-container">
+            <div class="sidebar__img-wrapp">
+              <img src="img/Clip4.jpg" alt="thumbnail-Clip4" class="thumbnail img-responsive">
+            </div>
+            <div class="sidebar__info-wrapp">
+              <div class="product__info">
+                <h3 class="product__name">SOFI BLOUSE</h3>
+                <div class="product__price flex-container">
+                  <span class="currency">&#36;</span>
+                  <p class="product__cost">79.95</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      <div class="underline"></div>
+
+        
+        </div><!--sidebar__body FEATURED PRODUCTS-->
+
+            
+            
+          </div> <!--sidebar-col-->
+         
+        </div> <!--sidebar__wrapp-->
+    </div> <!--sidebar-->
+    </div>
+
+    
+
+    </div> <!--container-->
+            
+  </section>
+  
+
+  
+
+  <footer class="footer">
+    <div class="payment-support">
+      <div class="payments flex-container">
+        <span class="block__text">We accept</span>
+        <img src="img/brands/Layer 29.png" alt="payments" class="block__img">
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div class="container flex-container">
+        <div class="cols-wrapp flex-container">
+          <div class="col">
+            <h6 class="col__title">Customer Service</h6>
+            <ul class="nav-list">
+              <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">FAQ</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Terms of payment</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Terms of sale</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Delivery terms and conditions</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Returns and Refunds</a></li> 
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="col__title">Information</h6>
+            <ul class="nav-list">
+              <li class="nav__item"><a href="#" class="nav__link">Affiliate</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Cookies</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">How to Shop</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">About Nelly</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Investor relations</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="col__title">Campaigns</h6>
+            <ul class="nav-list">
+              <li class="nav__item"><a href="#" class="nav__link">Evening dresses</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Makeup</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Fashion forward</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">training clothes</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Special Occasion Dresses</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="col__title">Stores</h6>
+            <ul class="nav-list">
+              <li class="nav__item"><a href="#" class="nav__link">Paris</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">New York</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">London</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Madrid</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Tokio</a></li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-social">
+          <h6 class="col__title">Social</h6>
+          <div class="social-block flex-container">
+            <a href="#" class="col__link"><img src="img/icons/twitter.svg" alt="twitter" class="col__img"></a>
+            <a href="#" class="col__link"><img src="img/icons/pinterest.svg" alt="twitter" class="col__img"></a>
+            <a href="#" class="col__link"><img src="img/icons/facebook.svg" alt="twitter" class="col__img"></a>
+            <a href="#" class="col__link"><img src="img/icons/google.svg" alt="twitter" class="col__img"></a>
+            <a href="#" class="col__link"><img src="img/icons/t.svg" alt="twitter" class="col__img"></a>
+            <a href="#" class="col__link"><img src="img/icons/vk.svg" alt="twitter" class="col__img"></a>
+          </div>
+         
+        </div>
+        <div class="col-secured flex-container">
+          <img src="img/Group11.png" alt="secured" class="col__img">
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright ">
+      <div class="container flex-container">
+        <div class="copyright-nav">
+          <a href="#" class="nav__link">Privacy & Cookies</a>
+          <a href="#" class="nav__link">Terms & Conditions </a>
+          <a href="#" class="nav__link">Accessibility  </a>
+          <a href="#" class="nav__link">Store Directory  </a>
+          <a href="#" class="nav__link">About Us </a>
+        </div>
+        <div class="copyright">
+          <a href="#" class="home__link">&copy LookShop.com</a>
+          <p class="copyright__text">All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+    
+
+  </footer>
+
+  
+    <div class="popup-register popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php">
+          <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Sign Up</h5>
+            <p class="popup__text">Please fill in this form to create an account.</p>
+        
+            <label class="label" for="email"><b>Email</b></label>
+            <input class="input" type="text" placeholder="Enter Your Email" name="email" required>
+        
+            <label class="label" for="psw"><b>Password</b></label>
+            <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+        
+            <label class="label" for="psw-repeat"><b>Repeat Password</b></label>
+            <input class="input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        
+            <label class="checkbox" >
+              <input class="input__checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        
+            <p class="privacy__text" >By creating an account you agree to our <br> <a class="privacy__link" href="#">Terms & Privacy</a>.</p>
+        
+            <div class="btn-container">
+            
+              <button type="submit" class="simple-btn big">Sign Up</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-login popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php"> 
+            <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Sign In</h5>        
+            <label class="label" for="username"><b>USERNAME</b></label>
+            
+            <input class="input" type="text" placeholder="Enter username" name="username" required>
+
+            <label class="label" for="psw"><b>PASSWORD</b></label>
+            <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                
+            <label class="checkbox" >
+              <input class="input__checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <div class="flex-container">
+              <p class="label__text" >You don't have an <button class="no-account">account?</button></p>
+              <p class="label__text" >Forgot <button class="no-password">password?</button></p>
+            </div>
+            <div class="btn-container">
+            
+              <button type="submit" class="simple-btn big login">Login</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-resetPassword popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php">
+            <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Reset password</h5>
+            <p class="popup__text">Please enter your email to reset your password</p>
+            <label class="label" for="email"><b>Email</b></label>
+            <input class="input" type="text" placeholder="Enter Your Email" name="email" required>
+            <div class="btn-container">
+              <button type="submit" class="simple-btn big">Submit</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  
+  
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

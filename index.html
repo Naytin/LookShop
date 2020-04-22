@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Start Template</title>
+  <title>LookShop</title>
   <!-- <link rel="stylesheet" href="../node_modules/slick-carousel/slick/slick-theme.css.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
   
 </head>
 
-<body>
+<body id="home">
   
   <header class="header">
     <!-- top-line -->
@@ -58,7 +58,9 @@
        
         <div class="wrapper-menu flex-container">
           <div class="logo-wrapper">
-            <img src="img/logo.png" alt="LookShoop" class="logo">
+            <a href="index.html" class="logo__link">
+              <img src="img/logo.png" alt="LookShoop" class="logo">
+            </a>
           </div>
 
           <div class="burger-menu-wrapp">
@@ -76,7 +78,7 @@
 
             <ul class="nav-list">
               <li class="nav__item dropdown"><a href="#" class="nav__link">new <i class="fas fa-sort-down"></i></a>
-                <ul class="nav-list submenu">
+                <ul class="nav-list submenu" data-submenu>
                   <li class="nav__item">
                     <a href="#" class="nav__link">Замена стекла</a></li>
                   <li class="nav__item">
@@ -88,40 +90,40 @@
                 </ul>
               </li>
               <li class="nav__item dropdown"><a href="#" class="nav__link">designers <i class="fas fa-sort-down"></i></a>
-                <ul class="nav-list submenu">
+                <ul class="nav-list submenu" data-submenu>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена стекла</a></li>
+                    <a href="#" class="nav__link">D&G</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Разблокировка</a></li>
+                    <a href="#" class="nav__link">Calvin Clein</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Чистка</a></li>
+                    <a href="#" class="nav__link">Luis Vuiton</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена микрофона</a></li>
+                    <a href="#" class="nav__link">Versace</a></li>
                 </ul></li>
               <li class="nav__item dropdown"><a href="#" class="nav__link">women <i class="fas fa-sort-down"></i></a>
-                <ul class="nav-list submenu">
+                <ul class="nav-list submenu" data-submenu>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена стекла</a></li>
+                    <a href="products.html" class="nav__link">Clothes</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Разблокировка</a></li>
+                    <a href="#" class="nav__link">Shoes</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Чистка</a></li>
+                    <a href="#" class="nav__link">Accessories</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена микрофона</a></li>
+                    <a href="#" class="nav__link">Bags</a></li>
                 </ul></li>
               <li class="nav__item dropdown"><a href="#" class="nav__link">men <i class="fas fa-sort-down"></i></a>
-                <ul class="nav-list submenu">
+                <ul class="nav-list submenu" data-submenu>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена стекла</a></li>
+                    <a href="#" class="nav__link">Clothes</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Разблокировка</a></li>
+                    <a href="#" class="nav__link">Shoes</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Чистка</a></li>
+                    <a href="#" class="nav__link">Accessories</a></li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Замена микрофона</a></li>
+                    <a href="#" class="nav__link">Bags</a></li>
                 </ul></li>
               <li class="nav__item dropdown"><a href="#" class="nav__link">clearence <i class="fas fa-sort-down"></i></a>
-                <ul class="nav-list submenu">
+                <ul class="nav-list submenu" data-submenu>
                   <li class="nav__item">
                     <a href="#" class="nav__link">Замена стекла</a></li>
                   <li class="nav__item">
@@ -130,7 +132,8 @@
                     <a href="#" class="nav__link">Чистка</a></li>
                   <li class="nav__item">
                     <a href="#" class="nav__link">Замена микрофона</a></li>
-                </ul></li>
+                </ul>
+              </li>
             </ul>
           </nav>
 
@@ -154,25 +157,25 @@
     <div class="slider">
       <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
 
-      <div class="slider__item img-responsive" style="background-image: url(img/slider.png);">
+      <div class="slider__item img-responsive bg" style="background-image: url(img/slider.png);">
         <div class="content-block">
           <img src="img/Group12.png" alt="content" class="img-responsive content__img">
           <button class="simple-btn big">SHOP NOW  <i class="fas fa-caret-right"></i></button>
         </div>
       </div>
-      <div class="slider__item img-responsive" style="background-image: url(img/slider.png);">
+      <div class="slider__item img-responsive bg" style="background-image: url(img/slider.png);">
         <div class="content-block">
           <img src="img/Group12.png" alt="content" class="img-responsive content__img">
           <button class="simple-btn big">SHOP NOW  <i class="fas fa-caret-right"></i></button>
         </div>
       </div>
-      <div class="slider__item img-responsive" style="background-image: url(img/slider.png);">
+      <div class="slider__item img-responsive bg" style="background-image: url(img/slider.png);">
         <div class="content-block">
           <img src="img/Group12.png" alt="content" class="img-responsive content__img">
           <button class="simple-btn big">SHOP NOW  <i class="fas fa-caret-right"></i></button>
         </div>
       </div>
-      <div class="slider__item img-responsive" style="background-image: url(img/slider.png);">
+      <div class="slider__item img-responsive bg" style="background-image: url(img/slider.png);">
         <div class="content-block">
           <img src="img/Group12.png" alt="content" class="img-responsive content__img">
           <button class="simple-btn big">SHOP NOW <i class="fas fa-caret-right"></i></button>
@@ -222,7 +225,7 @@
         </h2>
       </div>
     </div>
-    <div class="collage__item two" style="background-image: url(img/Rectangle3.jpg)">
+    <div class="collage__item two" style="background-image: url(img/clip9.jpg)">
       <div class="collage__content">
         <img src="img/Group3.png" alt="" class="content__img">
       </div>
@@ -832,12 +835,8 @@
    </div>
  </div>
 </div>
-
-      
-
-     
-
    
+
     </div>
   </section>
 
@@ -877,7 +876,7 @@
       </div>
     </div>
 
-    <span class="rectangle-all"></span>
+    <div class="underline"></div>
   </section>
 
   <section class="about container">
@@ -980,6 +979,80 @@
     
 
   </footer>
+
+  
+    <div class="popup-register popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php">
+          <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Sign Up</h5>
+            <p class="popup__text">Please fill in this form to create an account.</p>
+        
+            <label class="label" for="email"><b>Email</b></label>
+            <input class="input" type="text" placeholder="Enter Your Email" name="email" required>
+        
+            <label class="label" for="psw"><b>Password</b></label>
+            <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+        
+            <label class="label" for="psw-repeat"><b>Repeat Password</b></label>
+            <input class="input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        
+            <label class="checkbox" >
+              <input class="input__checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        
+            <p class="privacy__text" >By creating an account you agree to our <br> <a class="privacy__link" href="#">Terms & Privacy</a>.</p>
+        
+            <div class="btn-container">
+            
+              <button type="submit" class="simple-btn big">Sign Up</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-login popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php"> 
+            <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Sign In</h5>        
+            <label class="label" for="username"><b>USERNAME</b></label>
+            
+            <input class="input" type="text" placeholder="Enter username" name="username" required>
+
+            <label class="label" for="psw"><b>PASSWORD</b></label>
+            <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                
+            <label class="checkbox" >
+              <input class="input__checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <div class="flex-container">
+              <p class="label__text" >You don't have an <button class="no-account">account?</button></p>
+              <p class="label__text" >Forgot <button class="no-password">password?</button></p>
+            </div>
+            <div class="btn-container">
+            
+              <button type="submit" class="simple-btn big login">Login</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-resetPassword popup-window" style="display: none;" data-modal>
+      <div class="modal">
+        <form class="popup" action="action_page.php">
+            <button class="popup-close">&times;</button>
+            <h5 class="popup__title">Reset password</h5>
+            <p class="popup__text">Please enter your email to reset your password</p>
+            <label class="label" for="email"><b>Email</b></label>
+            <input class="input" type="text" placeholder="Enter Your Email" name="email" required>
+            <div class="btn-container">
+              <button type="submit" class="simple-btn big">Submit</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  
   
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>

@@ -6,17 +6,6 @@ $(document).ready(function(){
 
     owl.owlCarousel({
         loop:false,
-        // items : 1,
-        // itemsCustom : false,
-        // itemsDesktop : [1199,1],
-        // itemsDesktopSmall : [980,1],
-        // itemsTablet: [768,1],
-        // itemsTabletSmall: false,
-        // itemsMobile : [479,1],
-        // singleItem : false,
-        // itemsScaleUp : false,
-        // responsiveRefreshRate : 200,
-        // responsiveBaseWidth: window,
         margin: 10,
         responsiveClass: true,
         animateIn: true,
@@ -56,112 +45,69 @@ $(document).ready(function(){
 
         
 next.on('click', () => {
-    console.log('next');
+
     owl.trigger('next.owl.carousel');
 });
 
 prev.on('click', () => {
-    console.log('prev');
+
     owl.trigger('prev.owl.carousel');
-});
-
-
-$('.dropdown').click(function(e){ // при клике открывает выпадающее меню 
-    e.preventDefault();
-    console.log('click');
-    if($('.submenu', this).css('display') == 'block'){
-        $('.submenu', this).fadeOut();
-        $('.submenu', this).css('max-height','0');
-        $('.submenu', this).css('display','none');
-    }
-    else{
-        $('.submenu', this).fadeIn();
-        $('.submenu', this).css('max-height','100em');
-        $('.submenu', this).css('display','block');
-    }
-})
-
-$(document).mouseup(function(e){ // При клике на любую область закрывает подменю
-    var dropdown = $('.dropdown');
-    if (e.target!=dropdown[0]&&dropdown.has(e.target).length === 0){
-        $('.submenu', this).fadeOut();
-        $('.submenu', this).css('max-height','0');
-        $('.submenu', this).css('display','none');
-    }
 });
 
         
 });
 
 (function(){
+    try{
+        const openAcordion = (activeSelector, showSelector, animate = false, animateProp = 'bounce') => {
+            const menu = document.querySelector(activeSelector),
+                  showMenus = document.querySelectorAll(showSelector);
+                //   console.log(animateProp);
     
-    const openAcordion = (activeSelector, showSelector, animate = false, animateProp = 'bounce') => {
-        const menu = document.querySelector(activeSelector),
-              showMenus = document.querySelectorAll(showSelector);
-              console.log(animateProp);
-
-              menu.addEventListener('click', () =>{
-                showMenus.forEach(item =>{
-                    item.classList.toggle('block');
-                    if(animate){
-                        item.classList.toggle('animated');
-                        item.classList.toggle(animateProp);
-                    }
-                })
-              });
-    }
-
-    openAcordion('.active-menu','.nav__item-tab', true, 'bounceIn');
-    openAcordion('.burger-menu','.dropdown', true, 'lightSpeedIn');
-    // let activeMenu = document.querySelector('.active-menu'),
-    //     tabsMenu = document.querySelectorAll('.nav__item-tab');
-
-    //     activeMenu.addEventListener('click', function(){
-    //         tabsMenu.forEach(function(item){
-    //             // item.style.display = 'block';
-    //             item.classList.toggle('block');
-    //             item.classList.toggle('animated');
-    //             item.classList.toggle('bounceIn');
-    //         });
-    //     });
-
-       
-   
+                  menu.addEventListener('click', () =>{
+                    showMenus.forEach(item =>{
+                        item.classList.toggle('block');
+                        if(animate){
+                            item.classList.toggle('animated');
+                            item.classList.toggle(animateProp);
+                        }
+                    })
+            });
+        }
+    
+        openAcordion('.active-menu','.nav__item-tab', true, 'bounceIn');
+        openAcordion('.burger-menu','.dropdown', true, 'lightSpeedIn');
+    }catch(e){}
 
     
-
-
-    // const btnMenu = document.querySelectorAll('.dropdown');
-    // const menuAll = document.querySelectorAll('.submenu');
     
-    // const toggleMenu = function(item) {
-    //         item.classList.toggle('open');     
-    // }
+    
 
-    // btnMenu.forEach((item, i) =>{
-    //     item.addEventListener('click', function(e) {
-    //         let menu = this.querySelector('.submenu');
-    //         menuAll.forEach(item => {
-    //             item.classList.remove('open');
-    //         });
-    //         e.stopPropagation();
-    //         toggleMenu(menu);
-    //         eventTarget(menu,item)
-    //     });
-    // });
+    const dropdownMenu = (dropdownSelector, submenuSelector, activeSelector) =>{
+        const dropdown = document.querySelectorAll(dropdownSelector),
+              submenu = document.querySelectorAll(submenuSelector);
+        
+    
+        dropdown.forEach((item, i) =>{
+            item.addEventListener('click', (e) =>{
+                // e.preventDefault();
+                if(submenu[i].style.display == 'block'){
+                    submenu[i].classList.toggle(activeSelector);
+                    submenu[i].classList.add('animated', 'fadeOut');
 
-    // const eventTarget = function(targetMenu, buttonMenu) {
-    //     document.addEventListener('click', function(e) {
-    //         const target = e.target;
-    //         const its_menu = target == targetMenu || targetMenu.contains(target);
-    //         const its_btnMenu = target == buttonMenu
-    //         const menu_is_active = targetMenu.classList.contains('open');
-    //         if (!its_menu && !its_btnMenu && menu_is_active) {
-    //             toggleMenu(targetMenu);
-    //         }
+                }else{
+                    submenu[i].classList.add('animated', 'fadeIn');
+                    submenu[i].classList.toggle(activeSelector);
 
-    //     });
-    // }
+                }
+
+                });
+            });
+        }   
+            
+    dropdownMenu('.sidebar__item-text','.form-checkbox','active-dropdown');    
+    dropdownMenu('.dropdown','.submenu','active-dropdown');
+    dropdownMenu('.sidebar__header','.sidebar__body','active-dropdown');
 
     //open search form
     let searchBtn = document.querySelector('.search__icon'),
@@ -277,56 +223,341 @@ $(document).mouseup(function(e){ // При клике на любую облас
         ///-----------------------SLIDER- END-----------------------////
 
         ///-----------------------TABS------------------------////
-    const tabs = (headerS, tabS, contentS,activeC) => {
-        const header = document.querySelector(headerS),
-              tab = document.querySelectorAll(tabS),
-              content = document.querySelectorAll(contentS);
-
-        function hideTab(){
-            content.forEach(item =>{
-                item.style.display = 'none';
-                item.classList.add('animated', 'fadeIn');
+    try{
+        const tabs = (headerS, tabS, contentS,activeC) => {
+            const header = document.querySelector(headerS),
+                  tab = document.querySelectorAll(tabS),
+                  content = document.querySelectorAll(contentS);
+    
+            function hideTab(){
+                content.forEach(item =>{
+                    item.style.display = 'none';
+                    item.classList.add('animated', 'fadeIn');
+                });
+    
+                tab.forEach(item => {
+                    item.classList.remove(activeC);
+                })
+            }
+    
+            function showTab(i = 0){
+                content[i].style.display = 'flex';
+                tab[i].classList.add(activeC);
+            }
+    
+            hideTab();
+            showTab();
+    
+            header.addEventListener('click', (e) => {
+                const target = e.target; // єто тот єлемент куда кликнул пользователь
+    
+                 /* так как класслист работает с классами
+                а не с аргумнтами, нам нужно отделить точну, с помощью регулярных выражений  */
+    
+                //проверяем, что мы действительно кликнули в один из табов
+                if(target &&
+                (target.classList.contains(tabS.replace(/\./, "")) || 
+                target.parentNode.classList.contains(tabS.replace(/\./, "")))){
+                    // когда мы кликнули в один из табов, мы начинаем их перебирать и сохранять каждый таб и его индекс
+                    tab.forEach((item, i) => {
+                        //проверяем, что єлемент по которому мы кликнули, именно тот, который перебирается в цикле
+                        if(target == item || target.parentNode == item){
+                            hideTab();
+                            showTab(i);
+                        }
+                    });
+                }
+               
             });
+    
+        };
+    
+        tabs('.nav__list-tabs', '.nav__item-tab', '.carousel-wrapp', 'active-tab');
+    }catch(e){}
+    
+        ///-----------------------TABS END------------------------////
 
-            tab.forEach(item => {
-                item.classList.remove(activeC);
-            })
-        }
+        ///-----------------------MODALS------------------------////
 
-        function showTab(i = 0){
-            content[i].style.display = 'flex';
-            tab[i].classList.add(activeC);
-        }
-
-        hideTab();
-        showTab();
-
-        header.addEventListener('click', (e) => {
-            const target = e.target; // єто тот єлемент куда кликнул пользователь
-
-             /* так как класслист работает с классами
-            а не с аргумнтами, нам нужно отделить точну, с помощью регулярных выражений  */
-
-            //проверяем, что мы действительно кликнули в один из табов
-            if(target &&
-            (target.classList.contains(tabS.replace(/\./, "")) || 
-            target.parentNode.classList.contains(tabS.replace(/\./, "")))){
-                // когда мы кликнули в один из табов, мы начинаем их перебирать и сохранять каждый таб и его индекс
-                tab.forEach((item, i) => {
-                    //проверяем, что єлемент по которому мы кликнули, именно тот, который перебирается в цикле
-                    if(target == item || target.parentNode == item){
-                        hideTab();
-                        showTab(i);
+        const modals = () => {
+            function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true){
+                const trigger = document.querySelectorAll(triggerSelector),
+                      modal = document.querySelector(modalSelector),
+                      close = document.querySelector(closeSelector),
+                      windows = document.querySelectorAll('[data-modal]'),
+                      scroll = calcScroll();
+        
+                trigger.forEach(item => {
+                    item.addEventListener('click', (e) =>{
+                        if (e.target){
+                            e.preventDefault();
+                        }
+        
+                        windows.forEach(item => {
+                            item.style.display = 'none'
+                        });
+                        
+                        // modal.classList.add('animated', 'zoomInDown');
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                        document.body.style.marginRight = '0px';
+                    });
+                });
+        
+                close.addEventListener('click', () => {
+        
+                    windows.forEach(item => {
+                        item.style.display = 'none'
+                    });
+        
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                    document.body.style.marginRight = `0px`;
+                });
+        
+                modal.addEventListener('click', (e) =>{
+                    if (e.target === modal && closeClickOverlay){   
+        
+                        windows.forEach(item => {
+                            item.style.display = 'none'
+                        });
+        
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                        document.body.style.marginRight = `0px`;
+                    
                     }
                 });
             }
+        
+                 
+            function calcScroll(){ //функция которая отнимает ширину скролла, при открытии модального окна
+                let div = document.createElement('div');
+        
+                div.style.width = '50px';
+                div.style.height = '50px';
+                div.style.overflowY = 'scroll';
+                div.style.visibility = 'hidden';
+        
+                document.body.appendChild(div);
+                let scrollWidth = div.offsetWidth - div.clientWidth;
+                let a = div.clientWidth;      
+                div.remove();
+        
+                return scrollWidth;
+        
+            }
+        
+            bindModal('.header__user-link', '.popup-login', '.popup-login .popup-close');
+            bindModal('.no-account', '.popup-register', '.popup-register .popup-close', false);
+            bindModal('.no-password', '.popup-resetPassword', '.popup-resetPassword .popup-close',false);
+
+        }; 
+        
+        modals();
+
+        ///-----------------------MODALS END------------------------////
+
+        ///-----------------------PAGINATIONS------------------------////
+
+
+
+        // let list_items = [
+        //     'img/clip.jpg',
+        //     'img/clip2.jpg',
+        //     'img/clip3.jpg',
+        //     'img/clip4.jpg',
+        //     'img/clip4.jpg',
+        //     'img/clip6.jpg',
+        //     'img/clip7.jpg',
+        //     'img/clip8.jpg',
+        // ];
+
+
+        try{
+            const items = document.querySelector('.products').children,
+              prev = document.querySelectorAll('.pagination__prev'),
+              next = document.querySelectorAll('.pagination__next'),
+              pagin = document.querySelectorAll('.pagination-wrapp'),
+              pageCount = document.querySelectorAll('.pages-count'),
+              maxItem = 9;
+        let index = 1,
+            allItems = items.length;
+
+
+        const pagination = Math.ceil(items.length/maxItem);
+       
+        for(let i = 1; i < pagination + 1; i++){
+            pagin.forEach(item =>{
+                let num = document.createElement('div');
+                num.classList.add('pagination__item');
+                num.innerText = i;
+                item.appendChild(num);
+            })
+            
+
+        };
+
+        if(index == 1){
+            pageCount.forEach(item =>{
+                item.innerText = `Showing ${index} - ${maxItem} of ${allItems}`;
+            })
+            
+        }
+
+        let numbersPage = document.querySelectorAll('.pagination__item');
+
+        prev.forEach(item =>{
+            item.addEventListener('click', function(){
+                index--;
+                // console.log(item);
+                check();
+                showItems();
+            });
+        })
+        
+
+        next.forEach(item => {
            
-        });
+            item.addEventListener('click', function(){
+                index++;
+                // console.log(item);
+                check();
+                showItems();
+                
+            });
+        })
 
-    };
+        function check(){
+           
+            if(index == pagination){
+                next.forEach(item => {
+                    item.classList.add('disabled');
+                })
+                
+            }else{
+                next.forEach(item => {
+                    item.classList.remove('disabled');
+                })
+            }
 
-    tabs('.nav__list-tabs', '.nav__item-tab', '.carousel-wrapp', 'active-tab');
-        ///-----------------------TABS END------------------------////
+            if(index == 1){
+                prev.forEach(item => {
+                    item.classList.add('disabled');
+                })
+            }else{
+                prev.forEach(item => {
+                    item.classList.remove('disabled');
+                })
+            }
+            
+        }
+
+        function showItems(){
+            for(let i = 0; i < items.length; i++){
+                items[i].classList.remove('show');
+                items[i].classList.add('hide')
+
+                if(i >= (index*maxItem) - maxItem && i < index*maxItem){
+
+                    //if i greater than and equal to (index*maxItem)-maxItem;
+                    //means (1*9)-9=0 if index=2 then (2*9)-9=9
+                    items[i].classList.remove('hide');
+                    items[i].classList.add('show');
+                }
+                
+            }
+        }
+
+        showItems();
+        check();
+        }catch(e){}
+        
+             
+              
+
+    
+
+
+
+
+
+
+
+
+
+
+        
+       
+
+
+        // const paginatItem = document.querySelector('.pagination'),
+        //       list_elements = document.querySelector('.products'),
+        //     //   list_elementss = document.querySelectorAll('.product-wrapp'),
+        //       prod_item = document.querySelector('.product__img-wrapp');
+
+        
+            
+        
+        // let rows = 3,
+        //     current_page = 1;
+
+        // function displayList (items, wrapper, rows_per_page, page){
+        //     wrapper.innerHTML = '';
+        //     page--;
+
+        //     let start = rows_per_page * page,
+        //         end = start + rows_per_page,
+        //         paginatItems = items.slice(start, end);
+        //         console.log(start);
+
+        //     for(let i = 0; i < paginatItems.length; i++){
+        //         let item = paginatItems[i];
+        //         console.log(item);
+
+        //         let item_element = document.createElement('img');
+        //         item_element.setAttribute('src', item);
+        //         item_element.classList.add('product__img');
+        //         wrapper.appendChild(item_element);
+        //         // console.log(item_wrapp.children.firstchild);
+        //     }
+        // }
+
+        // function setupPagination(items, wrapper, rows_per_page){
+        //     wrapper.innerHTML = '';
+
+        //     let page_count = Math.ceil(items.length / rows_per_page);
+        //     for(let i = 1; i < page_count + 1; i++){
+        //        let btn = paginationBtn(i,items);
+        //     //    console.log(i);
+
+        //        wrapper.appendChild(btn);
+        //     }
+        // }
+
+        // function paginationBtn(page,items){
+        //     let btn = document.createElement('button');
+        //     btn.innerText = page;
+
+        //     if( current_page == page){
+        //         btn.classList.add('pagin-active');
+        //     }
+
+        //     btn.addEventListener('click', function(){
+        //         current_page = page;
+        //         displayList(items,list_elements,rows,current_page);
+        //         let current_btn = document.querySelector('.pagination button.pagin-active');
+        //         current_btn.classList.remove('pagin-active');
+
+        //         btn.classList.add('pagin-active');
+        //     });
+                
+        //     return btn;
+        // }
+
+        // displayList(list_items, list_elements, rows, current_page);
+        // setupPagination(list_items, paginatItem, rows);
+        ///-----------------------PAGINATIONS END------------------------////
 
 })();
 
